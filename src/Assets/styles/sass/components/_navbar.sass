@@ -1,0 +1,89 @@
+nav
+    &.main-navbar
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        transition: 0.2s all
+        height: 70px
+        background: rgba(0, 0, 0, 0.80)
+        z-index: 999
+        @include for-desktop-mid
+            .nav-contents
+                .nav-right                                 
+                    .hamburger-container
+                        display: flex !important
+                    .nav-left-container
+                        display: none !important
+                        position: fixed
+                        top: 0
+                        left: 0
+                        width: 350px
+                        height: 100vh
+                        background: rgba(0,0 ,0 , 0.70)
+                        padding: 150px 10px
+                        display: flex
+                        justify-content: center
+                        z-index: 100
+                        &.show
+                            display: block !important
+                        .right-contents
+                            z-index: 10
+                        .right-contents,.links,.buttons
+                            display: block !important
+                            .links
+                                .nav-link
+                                    margin: 20px 0
+                            .buttons 
+                                .button
+                                    margin: 20px 0
+                                
+        &.large
+            height: 170px !important
+            background: transparent
+            .nav-contents
+                padding: 5% 5%
+
+        .nav-contents
+            display: flex
+            justify-content: space-between
+            width: 100%
+            height: 100%
+            align-items: center
+            padding: 5px 5%
+            
+            .nav-left .left-contents .brand-name
+                h1
+                    color: $white
+            .nav-right 
+                .nav-right-bg
+                    position: fixed 
+                    content: ""
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    background: rgba(255, 255, 255,0.60 )
+                    z-index: 0
+                    display: none
+                    @include for-desktop-mid
+                        &.show
+                            display: block !important
+                .right-contents
+                    display: flex
+            .hamburger-container
+                display: flex
+                justify-content: flex-end
+                display: none
+                .hamburger
+                    width: 50px
+                    height: 50px
+                    cursor: pointer !important
+                    svg,path
+                        width: 100%
+                        height: auto
+                        fill: $white
+        
+
+
+        

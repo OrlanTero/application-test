@@ -1,0 +1,75 @@
+.home-big-container
+    width: 100%
+    height: 900px
+    background: $black
+    transition: 0.2s all
+    @include for-desktop-mid
+        height: 650px
+.carousel-image-content
+    width: 100%
+    height: 100%
+    position: relative
+    .carousel-image-bg
+        position: absolute
+        width: 100%
+        height: 100%
+        background-position-y: 8%
+        background-position-x: center
+        background-size: 150%
+        background-repeat: no-repeat
+        z-index: 0
+        background-size: cover
+        &.fade
+            animation: fade-in 0.5s forwards 
+        &::after
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: rgb(0,0,0)
+            background: linear-gradient(90deg, rgba(0,0,0,0.7) 20%, rgba(0,0,0,0.3449754901960784) 32%, rgba(0,0,0,0.036852240896358524) 39%, rgba(0,0,0,0.15730042016806722) 53%, rgba(0,0,0,0.34) 57%, rgba(0,0,0,0.7) 80%)
+    .carousel-main-content
+        width: 100%
+        height: 100%
+        z-index: 5 !important
+        position: absolute
+        left: 0
+        top: 0
+        display: flex
+        align-items: center
+        padding: 0 5%
+        .text-container
+            width: 600px
+            .headline
+                h1
+                    font-size: 70px
+                    color: $white
+        .description
+            padding: 20px 0
+            p
+                color: $white
+                font-weight: 400 !important
+                font-size: 15px  
+        @include for-desktop-mid
+            .text-container
+                width: 100%
+                text-align: center
+                .headline
+                    text-align: center
+                    h1
+                        font-size: 60px
+                .ratings-container
+                    justify-content: center
+            .buttons
+                justify-content: center
+        @include for-phone
+            text-container
+                width: 100%
+                text-align: center
+                .headline h1
+                    font-size: 54px
+
+
+

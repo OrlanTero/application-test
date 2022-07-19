@@ -1,0 +1,37 @@
+
+
+.button
+    padding: 8px 30px 
+    border-radius: 4px
+    cursor: pointer
+    white-space: nowrap
+    user-select: none
+    cursor: pointer !important
+    @extend .flex-center
+    .text
+        @extend .flex-center
+    &:active
+        transform: scale(0.9)
+    &.filled
+        background: $teal
+        .text span
+            font-size: 16px
+            color: $white
+    &.bordered
+        background: transparent
+        border: 1px solid $white
+        .text
+            span
+                font-size: 16px
+                color: $white
+    &.icon-button
+        padding: 0 0 !important
+        width: 50px
+        height: 40px
+        min-width: 50px
+        min-height: 40px
+        .icon
+            @extend .flex-center
+            svg,path
+                width: 24px
+                fill: $white
